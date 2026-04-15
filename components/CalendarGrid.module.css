@@ -35,8 +35,8 @@
 }
 
 .navBtn {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border: 1px solid #E7E5E4;
   background: #fff;
   border-radius: 10px;
@@ -46,30 +46,35 @@
   align-items: center;
   justify-content: center;
   color: #57534E;
-  transition: all 0.2s;
+  transition: all 0.15s;
   line-height: 1;
+  touch-action: manipulation;
 }
 
-.navBtn:hover {
-  background: #F5F5F4;
-  border-color: #D6D3D1;
+.navBtn:active {
+  background: #F0F4FF;
+  border-color: #1A56A4;
+  transform: scale(0.95);
 }
 
 .todayBtn {
-  padding: 7px 14px;
+  padding: 9px 16px;
   border: none;
   background: #1A56A4;
   color: #fff;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.15s, transform 0.1s;
   font-family: inherit;
+  touch-action: manipulation;
+  white-space: nowrap;
 }
 
-.todayBtn:hover {
+.todayBtn:active {
   background: #1648A0;
+  transform: scale(0.96);
 }
 
 /* Days of week */
@@ -113,15 +118,27 @@
   background: #fff;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.18s;
+  transition: background 0.12s, transform 0.1s;
   position: relative;
   font-family: inherit;
+  touch-action: manipulation;
+  /* Prevent text selection on fast taps */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.cell:hover {
-  background: #F0F4FF;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(26, 86, 164, 0.12);
+/* Active state for touch (replaces hover on mobile) */
+.cell:active {
+  background: #E8F0FE;
+  transform: scale(0.96);
+}
+
+@media (hover: hover) {
+  .cell:hover {
+    background: #F0F4FF;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(26, 86, 164, 0.12);
+  }
 }
 
 .solarDay {
@@ -206,13 +223,18 @@
     border-radius: 16px;
   }
 
+  .nav {
+    padding: 12px 12px;
+    gap: 6px;
+  }
+
   .cell {
-    min-height: 54px;
+    min-height: 58px;
     padding: 6px 2px 3px;
   }
 
   .solarDay {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .lunarDay {
@@ -222,4 +244,22 @@
   .navMonth {
     font-size: 17px;
   }
+
+  /* Slightly bigger dots on mobile */
+  .dotTiet,
+  .dotEvent,
+  .dotGood,
+  .dotBad {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Very small phones (< 360px) */
+@media (max-width: 360px) {
+  .solarDay { font-size: 15px; }
+  .lunarDay { font-size: 9px; }
+  .cell { min-height: 52px; }
+  .navMonth { font-size: 15px; }
+  .navBtn { width: 38px; height: 38px; }
 }

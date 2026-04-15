@@ -14,10 +14,24 @@ export const metadata: Metadata = {
   description:
     'Xem lịch âm dương, Can Chi, Giờ Hoàng Đạo, Ngày tốt xấu, Tra cứu tuổi và chọn ngày tốt cho sự kiện.',
   keywords: 'lịch âm dương, lịch việt nam, hoàng đạo, can chi, ngày tốt, tra tuổi',
+  applicationName: 'Lịch của tôi',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Lịch của tôi',
+  },
+  formatDetection: {
+    telephone: false,
+  },
   openGraph: {
     title: 'Lịch của tôi',
     description: 'Lịch âm dương Việt Nam đầy đủ và tiện lợi',
     type: 'website',
+  },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'theme-color': '#1A56A4',
   },
 };
 
@@ -28,6 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className={beVietnamPro.variable}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#1A56A4" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body>{children}</body>
     </html>
   );
