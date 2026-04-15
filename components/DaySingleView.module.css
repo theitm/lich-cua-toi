@@ -1,0 +1,396 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px 32px;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Navigation ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navArrow {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #E7E5E4;
+  background: #fff;
+  border-radius: 14px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #57534E;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  touch-action: manipulation;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.navArrow:active {
+  background: #EEF3FF;
+  border-color: #1A56A4;
+  transform: scale(0.92);
+}
+
+.navCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  background: #fff;
+  border: 1.5px solid #E7E5E4;
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: all 0.15s;
+}
+
+.navCenter:active {
+  background: #EEF3FF;
+  border-color: #1A56A4;
+}
+
+.navDow {
+  font-size: 12px;
+  font-weight: 700;
+  color: #78716C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navDateStr {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.navMonthHint {
+  font-size: 11px;
+  color: #1A56A4;
+  font-weight: 600;
+}
+
+/* ── Hero Card ── */
+.heroCard {
+  border-radius: 20px;
+  border: 2px solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.heroTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroDow {
+  font-size: 15px;
+  font-weight: 700;
+  color: #57534E;
+  min-width: fit-content;
+}
+
+.heroSolar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.heroDay {
+  font-size: 72px;
+  font-weight: 900;
+  color: #1C1917;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.heroMonthYear {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.heroMonthYear span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #57534E;
+  line-height: 1.3;
+}
+
+.heroLunar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+}
+
+.heroLunarIcon {
+  font-size: 20px;
+}
+
+.heroLunarText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1917;
+  line-height: 1.3;
+}
+
+.heroEvents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.heroBadge {
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Quality row ── */
+.qualityRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qualityBadge {
+  flex: 1;
+  padding: 11px 16px;
+  border-radius: 14px;
+  border: 1.5px solid;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.trucBadge {
+  padding: 11px 16px;
+  background: #F5F5F4;
+  border-radius: 14px;
+  font-size: 15px;
+  color: #57534E;
+  white-space: nowrap;
+}
+
+.trucBadge strong {
+  color: #1A56A4;
+}
+
+/* ── Can Chi ── */
+.canchiRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.canchiCard {
+  border-radius: 16px;
+  padding: 14px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.canchiLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #78716C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.canchiValue {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.canchiElement {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Suit ── */
+.suitRow {
+  display: flex;
+  gap: 10px;
+}
+
+.suitCard {
+  flex: 1;
+  border-radius: 14px;
+  padding: 13px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.suitTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.suitTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.suitTag {
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Hours ── */
+.hoursSection {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1917;
+  margin-bottom: 12px;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.hourCell {
+  border-radius: 10px;
+  padding: 9px 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1.5px solid;
+}
+
+.hoangDao {
+  background: #F0FDF4;
+  border-color: #86EFAC;
+}
+
+.hackDao {
+  background: #FFF5F5;
+  border-color: #FECACA;
+}
+
+.currentHour {
+  outline: 2.5px solid #1A56A4;
+  outline-offset: -1px;
+  box-shadow: 0 4px 16px rgba(26,86,164,0.2);
+}
+
+.hourName {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.hourRange {
+  font-size: 9px;
+  color: #78716C;
+  line-height: 1.2;
+}
+
+.hourCC {
+  font-size: 11px;
+  font-weight: 600;
+  color: #57534E;
+}
+
+.hourStatus {
+  font-size: 10px;
+  font-weight: 700;
+  display: none; /* Hidden — colour says it all */
+}
+
+.hoursLegend {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #57534E;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* Swipe hint */
+.swipeHint {
+  text-align: center;
+  font-size: 13px;
+  color: #C7C3BF;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 400px) {
+  .heroDay {
+    font-size: 60px;
+  }
+  .hoursGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .suitRow {
+    flex-direction: column;
+  }
+  .qualityRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .trucBadge {
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .page {
+    padding: 10px 12px 28px;
+    gap: 10px;
+  }
+  .heroDay {
+    font-size: 52px;
+  }
+  .heroLunarText {
+    font-size: 14px;
+  }
+}
