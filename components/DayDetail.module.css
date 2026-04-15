@@ -1,0 +1,269 @@
+.container {
+  margin: 0 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Date header */
+.dateHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.solarBig {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.dow {
+  font-size: 15px;
+  color: #78716C;
+  font-weight: 600;
+}
+
+.dayNum {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1C1917;
+  line-height: 1;
+}
+
+.monthYear {
+  font-size: 16px;
+  color: #57534E;
+  font-weight: 500;
+}
+
+.qualityBadge {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 100px;
+  border: 1.5px solid;
+}
+
+/* Lunar box */
+.lunarBox {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.lunarMain {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.lunarLabel {
+  font-size: 15px;
+  color: #78716C;
+  font-weight: 600;
+}
+
+.lunarValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1917;
+}
+
+/* Events */
+.eventsBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.eventTag {
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Can Chi Grid */
+.canchiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ccCard {
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.ccLabel {
+  font-size: 12px;
+  color: #78716C;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ccFull {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.ccElement {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Suitable/Avoid */
+.suitSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 500px) {
+  .suitSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suitBox {
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.suitTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.suitTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.suitTag {
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Hours */
+.hoursSection {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1917;
+  margin-bottom: 12px;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+@media (max-width: 400px) {
+  .hoursGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hourCell {
+  border-radius: 10px;
+  padding: 8px 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  transition: transform 0.15s;
+}
+
+.hourCell:hover {
+  transform: translateY(-2px);
+}
+
+.hoangDao {
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
+}
+
+.hackDao {
+  background: #FFF5F5;
+  border: 1.5px solid #FECACA;
+}
+
+.currentHour {
+  outline: 2.5px solid #1A56A4;
+  outline-offset: -1px;
+  box-shadow: 0 4px 16px rgba(26, 86, 164, 0.2);
+}
+
+.hourName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1C1917;
+}
+
+.hourRange {
+  font-size: 10px;
+  color: #78716C;
+}
+
+.hourCanChi {
+  font-size: 11px;
+  font-weight: 600;
+  color: #57534E;
+}
+
+.hourLabel {
+  font-size: 10px;
+  color: #78716C;
+  display: none; /* hide redundant label */
+}
+
+.hoursLegend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #57534E;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

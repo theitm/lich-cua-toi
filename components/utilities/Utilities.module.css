@@ -1,0 +1,600 @@
+/* Shared styles for all utility components */
+
+.utility {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.utilTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1C1917;
+  margin: 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.personBlock {
+  background: #F9FAFB;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #78716C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 120px;
+  padding: 11px 14px;
+  border: 1.5px solid #E7E5E4;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff;
+  color: #1C1917;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #1A56A4;
+}
+
+.genderBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.genderBtn {
+  padding: 10px 14px;
+  border: 1.5px solid #E7E5E4;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  color: #57534E;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.genderBtnActive {
+  background: #EEF3FF;
+  border-color: #1A56A4;
+  color: #1A56A4;
+}
+
+/* Compare toggle */
+.compareToggle {
+  padding: 12px 14px;
+  background: #F9FAFB;
+  border-radius: 12px;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #1C1917;
+  user-select: none;
+}
+
+.toggleLabel input[type="checkbox"] {
+  display: none;
+}
+
+.toggleSlider {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  background: #D6D3D1;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.toggleSlider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.toggleLabel input:checked + .toggleSlider {
+  background: #1A56A4;
+}
+
+.toggleLabel input:checked + .toggleSlider::after {
+  transform: translateX(20px);
+}
+
+/* Submit button */
+.submitBtn {
+  padding: 14px;
+  background: #1A56A4;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.submitBtn:hover {
+  background: #1648A0;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* Person card */
+.personCard {
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.personCardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #78716C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.personCardMain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.zodiacIcon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.personCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.personName {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.personSubInfo {
+  font-size: 14px;
+  color: #78716C;
+}
+
+.personDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+}
+
+.detailLabel {
+  font-size: 14px;
+  color: #78716C;
+  font-weight: 600;
+}
+
+.detailValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1C1917;
+}
+
+/* Compat box */
+.compatBox {
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compatTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1C1917;
+}
+
+.compatPair {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.zodiacBig {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.vsText {
+  font-size: 16px;
+  color: #78716C;
+  font-weight: 600;
+}
+
+.compatLabel {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.scoreBarWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scoreBarBg {
+  flex: 1;
+  height: 10px;
+  background: #F0F0F0;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scoreNum {
+  font-size: 15px;
+  font-weight: 700;
+  min-width: 60px;
+  text-align: right;
+}
+
+.compatDesc {
+  font-size: 15px;
+  color: #57534E;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cungCompatNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #78716C;
+  background: #F9FAFB;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.cungCompatIcon {
+  font-size: 18px;
+}
+
+.zodiacDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zodiacRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #F9FAFB;
+  border-radius: 10px;
+}
+
+.zodiacRowLabel {
+  font-size: 13px;
+  color: #78716C;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.zodiacRowValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1C1917;
+  flex: 1;
+}
+
+.zodiacRowMenh {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Good day finder */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #57534E;
+}
+
+.eventTypes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.eventTypeBtn {
+  padding: 8px 14px;
+  border: 1.5px solid #E7E5E4;
+  background: #fff;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  color: #57534E;
+  transition: all 0.2s;
+}
+
+.eventTypeBtnActive {
+  background: #EEF3FF;
+  border-color: #1A56A4;
+  color: #1A56A4;
+}
+
+.dateRange {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resultsHeader {
+  font-size: 15px;
+  color: #57534E;
+}
+
+.noResult {
+  padding: 20px;
+  background: #FFF9F0;
+  border-radius: 14px;
+  font-size: 15px;
+  color: #78716C;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.resultList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resultCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1.5px solid #E7E5E4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.resultLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resultDow {
+  font-size: 12px;
+  color: #78716C;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resultDate {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.resultLunar {
+  font-size: 13px;
+  color: #78716C;
+}
+
+.resultRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.resultTruc {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A56A4;
+}
+
+.resultCC {
+  font-size: 13px;
+  color: #78716C;
+}
+
+.goodBadge {
+  font-size: 13px;
+  font-weight: 700;
+  color: #16A34A;
+  background: #DCFCE7;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* Hoàng Đạo Widget */
+.currentTimeBox {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.currentTimeLabel {
+  font-size: 13px;
+  color: #78716C;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.currentTimeBig {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1C1917;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.currentHourBadge {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1.5px solid;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  align-self: center;
+}
+
+.hourgridFull {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.hourgridCell {
+  border-radius: 12px;
+  padding: 12px;
+  border: 1.5px solid;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: transform 0.15s;
+}
+
+.hourgridCell:hover {
+  transform: translateY(-2px);
+}
+
+.hourgridGood {
+  background: #F0FDF4;
+  border-color: #86EFAC;
+}
+
+.hourgridBad {
+  background: #FFF5F5;
+  border-color: #FECACA;
+}
+
+.hourgridCurrent {
+  outline: 2.5px solid #1A56A4;
+  outline-offset: -1px;
+  box-shadow: 0 4px 20px rgba(26, 86, 164, 0.2);
+}
+
+.hourgridName {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1917;
+}
+
+.hourgridRange {
+  font-size: 11px;
+  color: #78716C;
+}
+
+.hourgridCC {
+  font-size: 13px;
+  font-weight: 600;
+  color: #57534E;
+}
+
+.hourgridStatus {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hourgridLegend {
+  font-size: 14px;
+  color: #57534E;
+  line-height: 1.8;
+  background: #F9FAFB;
+  padding: 12px 16px;
+  border-radius: 12px;
+}

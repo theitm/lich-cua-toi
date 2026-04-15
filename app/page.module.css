@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #E7E5E4, transparent);
+  margin: 4px 16px 4px;
+}
+
+@media (max-width: 640px) {
+  .main {
+    max-width: 100%;
+  }
+}
